@@ -19,9 +19,22 @@ function Register() {
     <div className="auth-form">
       <h2>Registrarse</h2>
       <form onSubmit={handleRegister}>
-        {/* Mismos campos que Login */}
+        <input
+          type="email"
+          placeholder="Correo electrónico"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Contraseña"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button type="submit">Registrar</button>
       </form>
     </div>
   );
 }
+
 export default Register;
